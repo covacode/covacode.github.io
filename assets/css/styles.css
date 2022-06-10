@@ -526,6 +526,10 @@ img {
   width: 25%;
 }
 
+.skills__learing{
+  width: 10%;
+}
+
 .skills__close .skills__list{
   height: 0;
   overflow: hidden;
@@ -1230,6 +1234,9 @@ img {
   .home__social{
     transform: translateX(-6rem);
   }
+  .home__title{
+    font-size: var(--h1-font-size);
+  }
 
   .services__container{
     grid-template-columns: repeat(3, 238px);
@@ -1257,4 +1264,8 @@ img {
   .contact__inputs{
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.text-justify{
+  text-align: justify;  
 }
