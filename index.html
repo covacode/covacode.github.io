@@ -1497,31 +1497,38 @@
                     </div>
 
 
-                    <form action="#" class="contact__form grid">
+                    <form action="https://formsubmit.co/covascode@gmail.com" method="POST" class="contact__form grid">
                         <div class="contact__inputs grid">
+                            <input type="hidden" name="_captcha" value="true">
+                            <input type="hidden" name="_template" value="box">
+                            <input type="text" name="_honey" style="display:none">
+                            <input type="hidden" name="_subject" value="¡Nuevo mensaje!">
+                            <input type="hidden" name="_next" value="https://covacode.github.io/">
+                            <input type="hidden" name="_autoresponse" value="En breve estaré comunicándome contigo, ¡Muchas gracias por escribir!">
+
                             <div class="contact__content">
                                 <label for="" class="contact__label">Nombre</label>
-                                <input type="text" class="contact__input">
+                                <input type="text" name="nombre" required class="contact__input">
                             </div>
                             <div class="contact__content">
                                 <label for="" class="contact__label">Proyecto</label>
-                                <input type="text" class="contact__input">
+                                <input type="text" name="proyecto" required class="contact__input">
                             </div>                            
                         </div>
                         <div class="contact__content">
                             <label for="" class="contact__label">Email</label>
-                            <input type="email" class="contact__input">
+                            <input type="email" name="email" required class="contact__input">
                         </div>
                         <div class="contact__content">
                             <label for="" class="contact__label">Mensaje</label>
-                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                            <textarea name="mensaje" required id="" cols="0" rows="7" class="contact__input"></textarea>
                         </div>
 
                         <div>
-                            <a href="#" class="button button--flex">
-                                Enviar mensaje
+                            <button type="submit" class="button button--flex" style="border: 0px">
+                                Enviar mensaje                                
                                 <i class="uil uil-message button__icon"></i>
-                            </a>
+                            </button>                            
                         </div>
                     </form>
                 </div>
