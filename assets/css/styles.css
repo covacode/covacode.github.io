@@ -807,6 +807,10 @@ img {
 }
 
 /*==================== TESTIMONIAL ====================*/
+.testimonial__container{
+  overflow: initial;
+}
+
 .testimonial__data,
 .testimonial__header{
   display: flex;
