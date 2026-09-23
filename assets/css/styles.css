@@ -842,8 +842,15 @@ img {
   margin-bottom:var(--mb-2-5);
 }
 
+.testimonial__stars{
+  display: flex;
+  align-items: center;
+  gap: .15rem;
+  margin-top: var(--mb-0-25);
+}
+
 .testimonial__icon-star{
-  color: var(--first-color);  
+  color: var(--first-color);
 }
 
 .swiper-container .swiper-pagination-testimonial{
