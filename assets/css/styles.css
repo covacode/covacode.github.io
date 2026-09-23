@@ -458,14 +458,39 @@ img {
 
 /*==================== SKILLS ====================*/
 .skills__container{
-  row-gap:0;
+  row-gap: 1.5rem;
+}
+
+.skills__content{
+  border: 1px solid var(--first-color-lighter);
+  border-radius: .75rem;
+  padding: 1rem 1.25rem;
+  transition: .3s;
+}
+
+.skills__content:hover{
+  border-color: var(--first-color);
 }
 
 .skills__header{
   display:flex;
   align-items:center;
-  margin-bottom: var(--mb-2-5);
+  margin: -1rem -1.25rem var(--mb-2-5);
+  padding: 1rem 1.25rem;
+  border-radius: .75rem .75rem 0 0;
   cursor: pointer;
+  transition: .3s;
+}
+
+.skills__open .skills__header{
+  background-color: var(--first-color);
+}
+
+.skills__open .skills__header .skills__title,
+.skills__open .skills__header .skills__subtitle,
+.skills__open .skills__icon,
+.skills__open .skills__arrow{
+  color: #fff;
 }
 
 .skills__icon,
@@ -556,6 +581,7 @@ img {
 .qualification__tabs{
   display: flex;
   justify-content: space-evenly;
+  gap: .75rem;
   margin-bottom: var(--mb-2);
 }
 
@@ -563,10 +589,25 @@ img {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
+  border: 1px solid var(--first-color-lighter);
+  border-radius: .5rem;
+  padding: .5rem .75rem;
+  transition: .3s;
 }
 
 .qualification__button:hover{
   color: var(--first-color);
+  border-color: var(--first-color);
+}
+
+.qualification__button.qualification__active{
+  background-color: var(--first-color);
+  border-color: var(--first-color);
+  color: #fff;
+}
+
+.qualification__button.qualification__active:hover{
+  color: #fff;
 }
 
 .qualification__icon{
@@ -845,6 +886,7 @@ img {
 .testimonial__stars{
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: .15rem;
   margin-top: var(--mb-0-25);
 }
