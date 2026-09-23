@@ -106,10 +106,15 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
 });
 
 /*==================== TESTIMONIAL ====================*/
-let swiperTestimonial = new Swiper('.testimonial__container', {    
+let swiperTestimonial = new Swiper('.testimonial__container', {
+    cssMode: true,
     loop:true,
     grabCursor: true,
-    spaceBetween: 48,   
+    spaceBetween: 48,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
     pagination: {
         el: '.swiper-pagination',
         clickable:true,

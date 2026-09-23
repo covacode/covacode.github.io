@@ -18,7 +18,7 @@
     --title-color: hsl(var(--hue-color), 8%, 15%);
     --text-color: hsl(var(--hue-color), 8%, 45%);
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
-    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --input-color: hsl(var(--hue-color), 45%, 89%);
     --body-color: hsl(var(--hue-color), 60%, 99%);
     --container-color: #fff;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
@@ -118,7 +118,7 @@ html {
 }
 
 body {
-  margin: 0 0 var(--header-height) 0;
+  margin: 0 0 calc(var(--header-height) + env(safe-area-inset-bottom, 0px)) 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
@@ -187,6 +187,7 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 /*==================== NAV ====================*/
@@ -451,6 +452,8 @@ img {
 .about__buttons{
   display:flex;
   justify-content:center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 /*==================== SKILLS ====================*/
@@ -804,6 +807,10 @@ img {
 }
 
 /*==================== TESTIMONIAL ====================*/
+.testimonial__container{
+  overflow: initial;
+}
+
 .testimonial__data,
 .testimonial__header{
   display: flex;
@@ -835,8 +842,15 @@ img {
   margin-bottom:var(--mb-2-5);
 }
 
+.testimonial__stars{
+  display: flex;
+  align-items: center;
+  gap: .15rem;
+  margin-top: var(--mb-0-25);
+}
+
 .testimonial__icon-star{
-  color: var(--first-color);  
+  color: var(--first-color);
 }
 
 .swiper-container .swiper-pagination-testimonial{
@@ -946,15 +960,17 @@ img {
 }
 /*========== SCROLL UP ==========*/
 .scrollup{
-  position: fixed; 
+  position: fixed;
   right: 1rem;
   bottom: -20%;
   background-color: var(--first-color-alt);
-  opacity: .8;
+  opacity: 1;
   padding: 0 .3rem;
   border-radius: .4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .35);
+  border: 2px solid var(--body-color);
   z-index: var(--z-tooltip);
-  transition: .4s;  
+  transition: .4s;
 }
 
 .scrollup:hover{
@@ -968,7 +984,7 @@ img {
 /* Show scroll */
 
 .show-scroll{
-  bottom: 5rem;
+  bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
 }
 
 /*========== SCROLL BAR ==========*/
