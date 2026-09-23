@@ -459,6 +459,7 @@ img {
 /*==================== SKILLS ====================*/
 .skills__container{
   row-gap: 1.5rem;
+  align-items: start;
 }
 
 .skills__content{
@@ -475,7 +476,7 @@ img {
 .skills__header{
   display:flex;
   align-items:center;
-  margin: -1rem -1.25rem var(--mb-2-5);
+  margin: -1rem -1.25rem 0;
   padding: 1rem 1.25rem;
   border-radius: .75rem .75rem 0 0;
   cursor: pointer;
@@ -484,6 +485,7 @@ img {
 
 .skills__open .skills__header{
   background-color: var(--first-color);
+  margin-bottom: var(--mb-2-5);
 }
 
 .skills__open .skills__header .skills__title,
@@ -886,7 +888,7 @@ img {
 .testimonial__stars{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: .15rem;
   margin-top: var(--mb-0-25);
 }
@@ -1101,6 +1103,9 @@ img {
   .testimonial__data,
   .testimonial__description{
     text-align: center;
+  }
+  .testimonial__stars{
+    justify-content: center;
   }
 
 }
